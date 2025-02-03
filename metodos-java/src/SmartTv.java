@@ -27,7 +27,7 @@ public class SmartTv {
             volume++;
             System.out.println("Aumentando o volume para: " + volume);
         } else {
-            System.out.println("TV desligada");
+            System.out.println("TV desligada para aumentar volume");
         }
     }
 
@@ -36,13 +36,18 @@ public class SmartTv {
             volume--;
             System.out.println("Diminuindo o volume para: " + volume);
         } else {
-            System.out.println("TV desligada");
+            System.out.println("TV desligada para diminuir volume");
         }
     }
 
     public void trocarCanal(int novoCanal) {
-        canal = novoCanal;
-        System.out.println("Trocando o canal para: " + canal);
+        if (ligada) {
+            canal = novoCanal;
+            System.out.println("Trocando o canal para: " + canal);
+        } else {
+
+            System.out.println("TV desligada para trocar canal");
+        }
     }
 
     public void mudarCanal(String mudar) {
@@ -55,13 +60,8 @@ public class SmartTv {
                 System.out.println("Mudando o canal para -: " + canal);
             }
         } else {
-            System.out.println("TV desligada");
+            System.out.println("TV desligada para mudar canal");
         }
     }
 
-    // public boolean verificarTv(){
-    // if(!ligada){
-    // ligada = false;
-    // }
-    // }
 }
