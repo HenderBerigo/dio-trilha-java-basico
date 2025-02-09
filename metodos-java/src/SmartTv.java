@@ -16,7 +16,7 @@ public class SmartTv {
     public void desligar() {
         if (ligada) {
             ligada = false;
-            System.out.println("Desligada a TV");
+            System.out.println("Desligando a TV");
         } else {
             System.out.println("TV já desligada");
         }
